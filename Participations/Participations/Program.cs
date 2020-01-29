@@ -33,24 +33,12 @@ namespace Participations
                 Console.WriteLine("Your guess was wrong :(");
             }
 
-
-
-
-                      
+            const string developerName = "Shawn Ross";
+            Console.WriteLine(developerName);
           
-
-
-
-           
-
-
-
-
-
-
-            
-
-        
+                                       
+                                                                        
+                  
             Console.ReadKey();
 
         }
