@@ -16,12 +16,10 @@ namespace Collections2
             for (int i = 0; i < coursesubject.Length; i++)
             {
                 Console.WriteLine("Enter a course subject name");
-                string name = Console.ReadLine();
-                coursesubject[i] = name;
-
+                coursesubject[i] = Console.ReadLine();
+                
                 Console.WriteLine("Enter a course ID number");
-                int id = Convert.ToInt32(Console.ReadLine());
-                courseid[i] = id;
+                courseid[i] = Convert.ToInt32(Console.ReadLine());
             }
 
             
@@ -50,35 +48,78 @@ namespace Collections2
 
             } while (answer.ToLower() == "y");
 
-            double sum = 0;
-            foreach (var score in scores)
+            //double sum = 0;
+            //foreach (var score in scores)
+            //{
+            //    sum = sum + score;
+            //}
+
+            double average = Average(scores);
+            Console.WriteLine("Your grade average is " + average.ToString("P"));
+
+            Dictionary<string, List<double>> studentgrades = new Dictionary<string, List<double>>();
+            List<double> mis3013grades = new List<double>();
+            mis3013grades.Add(0.95);
+            mis3013grades.Add(0.75);
+            mis3013grades.Add(0.55);
+
+            List<double> mis3213grades = new List<double>();
+            mis3213grades.Add(0.95);
+            mis3213grades.Add(0.25);
+            mis3213grades.Add(1.00);
+
+            List<double> mis2113grades = new List<double>();
+            mis2113grades.Add(0.35);
+            mis2113grades.Add(0.25);
+            mis2113grades.Add(0.55);
+
+            studentgrades.Add("MIS3013", mis3013grades);
+            studentgrades.Add("MIS3213", mis3213grades);
+            studentgrades.Add("MIS2113", mis2113grades);
+
+
+
+            foreach (var coursecode in studentgrades.Keys)
             {
-                sum = sum + score;
+                List<double> currentGrades = studentgrades[coursecode];
+                //double courseCodeAverage = 0;
+
+                //foreach (double grade in currentGrades)
+                //{
+                //  courseCodeAverage += grade;
+                // }
+
+                double courseCodeAverage = Average(currentGrades);
+                
+                Console.WriteLine($"The average for {coursecode} is {courseCodeAverage/currentGrades.Count}.");
             }
 
-            double average = sum / scores.Count;
-            Console.WriteLine("Your grade average is " + average);
-
-            int[] grades = new int[] { 90, 92, 80, 93, 97, 99, 75, 80, 82 };
-            Dictionary<string, int> finalgrades = new Dictionary<string, int>();
 
 
-            finalgrades.Add(course[1], grades[0]);
-            finalgrades.Add(course[1], grades[1]);
-            finalgrades.Add(course[1], grades[2]);
-            finalgrades.Add(course[2], grades[3]);
-            finalgrades.Add(course[2], grades[4]);
-            finalgrades.Add(course[2], grades[5]);
-            finalgrades.Add(course[3], grades[6]);
-            finalgrades.Add(course[3], grades[7]);
-            finalgrades.Add(course[3], grades[8]);
-
-            
 
 
 
 
             Console.ReadKey();
+        }
+        
+        /// <summary>
+        /// Provided a list of double values, this function will calculate the average
+        /// </summary>
+        /// <param name="values">A list of double values to calculate the average of</param>
+        /// <returns>Return the average of the values</returns>
+        static double Average(List<double> values)
+        {
+            double sum = 0;
+
+            foreach (double value in values)
+            {
+                sum += value;
+            }
+
+
+
+            return sum/values.Count;
         }
     }
 }
