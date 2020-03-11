@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "Functions\Func
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionsParticipation", "FunctionsParticipation\FunctionsParticipation.csproj", "{73D7F82E-B289-481C-B99E-680EF9C16B04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionsParticipation2", "FunctionsParticipation2\FunctionsParticipation2.csproj", "{C14BF3F3-8268-4404-8CD5-113CD7211C40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{73D7F82E-B289-481C-B99E-680EF9C16B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73D7F82E-B289-481C-B99E-680EF9C16B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73D7F82E-B289-481C-B99E-680EF9C16B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14BF3F3-8268-4404-8CD5-113CD7211C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14BF3F3-8268-4404-8CD5-113CD7211C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14BF3F3-8268-4404-8CD5-113CD7211C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14BF3F3-8268-4404-8CD5-113CD7211C40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

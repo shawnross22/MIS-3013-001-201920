@@ -12,6 +12,7 @@ namespace FunctionsParticipation
         static void Main(string[] args)
         {
             DeveloperInformation("Shawn Ross", "MIS 3013", "3/9/20");
+
             Console.WriteLine("What type of calculation do you want to perform?");
             string calc = Console.ReadLine().ToLower();
             Console.WriteLine("What is your first value?");
@@ -33,7 +34,7 @@ namespace FunctionsParticipation
             {
                 result = Multiply(firstnum, secondnum);
             }
-            else
+            else/
             {
                 result = Divide(firstnum, secondnum);
             }
